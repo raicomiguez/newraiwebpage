@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#09080f">
+    <meta name="description" content="Raizel's webpage – a first year Computer Science student at Bicol University.">
+    <title>RAIZEL'S WEBPAGE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Lets keyboard users jump past the menu -->
+    <a class="skip-link" href="#about">Skip to content</a>
+
+    <!-- HEADER EXPLAINED
+         <header>  = the top of the page: menu + big title + the shooting stars
+         <nav>     = the menu. Each link jumps to a section with href="#section-id"
+         .night    = the shooting stars (they are only decoration, made with CSS)
+         .hero     = the big title, the motto and the "Scroll down" hint
+    -->
+    <header id="home" class="site-header">
+        <div class="night" aria-hidden="true">
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+        </div>
+
+        <nav class="nav" aria-label="Main menu">
+            <a class="nav-logo" href="#home">RAIZEL.</a>
+            <ul class="nav-links">
+                <li><a href="#about">LEARN ABOUT ME</a></li>
+                <li><a href="#Path">PATH TO COMPUTING</a></li>
+                <li><a href="#Class">CLASS SCHEDULE</a></li>
+                <li><a href="#hobbies">HOBBIES &amp; FAVORITES</a></li>
+                <li><a href="#Goals">GOALS</a></li>
+                <li><a href="#Reflect">REFLECTION</a></li>
+                <li><a href="#Contact">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero">
+            <h1>RAIZEL'S WEBPAGE</h1>
+            <p class="tagline">AD MAIOREM DEI GLORIAM</p>
+            <a class="scroll-hint" href="#about" aria-label="Scroll down">
+                <span>Scroll down</span>
+                <span class="arrow">&#8595;</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ABOUT ME SECTION EXPLAINED
+     <section id="about">  = the About Me part of the page. The id lets the menu link jump here with href="#about"
+     <img>                 = my photo
+                             src="./images/Raizel.jpg"  the image file name (must be inside the images folder)
+                             alt="Photo of me"          text shown if the image doesn't load, and read by screen readers
+                             width="250"                makes the photo 250 pixels wide
+     <h2>                  = the headings of this section (HELLO and ABOUT ME)
+     <p>                   = paragraphs of text: first a short hello, then a longer introduction
+     <h3>                  = smaller heading, used to show my favorite Bible verse (Philippians 4:13)
+-->
+        <section id="about" class="panel">
+            <img src="./images/Raizel.jpg" alt="Photo of me" width="250">
+            <div class="about-text">
+                <h2>HELLO</h2>
+                <p>
+                    Hi! I'm John Raizel Cominguez, and im a First year Computer Science Student in Bicol University.
+                    I am someone who enjoys learning new things, exploring technology, and challenging myself to improve.
+                    I believe that every experience is an opportunity to grow and become a better version of myself.
+                </p>
+                <h2>ABOUT ME</h2>
+                <p>
+                    Hello! I'm John Raizel Cominguez from Tabaco City and a College Student in Bicol University
+                    taking Computer Science as my program/course of my choice. I choose Computer Science because
+                    I want to learn how to code and eventually develop a game or any app.
+                    I like playing online games, listening to music and learn new things that interest me.
+                </p>
+
+                <div class="verse">
+                    <h3>Philippians 4:13</h3>
+                    <p>I can do all things through Christ who strengthens me</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PATH TO COMPUTING: three paragraphs, numbered 01, 02, 03 by the CSS -->
+        <section id="Path" class="panel">
+            <h2>Path to computing</h2>
+            <div class="steps">
+                <p class="path-box">
+                    My journey in computing is a process of discovering new things and developing my skills in technology. I chose Computer Science
+                    because I want to understand how computers and different applications work. Through my activities, especially creating my About
+                    Me webpage, I learned how to turn my ideas into something creative using web design.
+                </p>
+                <p class="path-box">
+                    There are times when coding feels difficult, especially when my output does not look the way I expected. But these challenges
+                    encourage me to be patient, explore solutions, and keep practicing. Each lesson helps me understand more about programming and website development.
+                </p>
+                <p class="path-box">
+                    As I continue this journey, I want to become better at coding, improve my creativity, and gain the confidence to create my own projects.
+                    I know I still have a lot to learn, but I am willing to keep improving step by step.
+                </p>
+            </div>
+        </section>
+
+        <!-- CLASS SCHEDULE TABLE EXPLAINED
+     <table>   = the whole table
+     <thead>   = the top row with the 3 column titles: Day | Subject | Time
+     <tbody>   = all the classes, one row for each class
+     <tr>      = one row = one class
+     <th>      = a heading cell (Day, Subject, Time)
+     <td>      = a cell: first the day, then the subject, then the time
+     sch-prog / sch-math / sch-gen = the color of the class (programming, math, general)
+     Every row must have exactly 3 cells so the columns line up.
+-->
+        <section id="Class" class="panel">
+            <h2>CLASS SCHEDULE</h2>
+
+            <table class="schedule">
+                <thead>
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Monday -->
+                    <tr class="sch-prog" tabindex="0">
+                        <td>Monday</td>
+                        <td><span class="sch-dot"></span>Computer Programming</td>
+                        <td>4:00 PM – 7:00 PM</td>
+                    </tr>
+
+                    <!-- Tuesday -->
+                    <tr class="sch-prog" tabindex="0">
+                        <td>Tuesday</td>
+                        <td><span class="sch-dot"></span>P64COMP</td>
+                        <td>1:00 PM – 2:30 PM</td>
+                    </tr>
+                    <tr class="sch-math" tabindex="0">
+                        <td>Tuesday</td>
+                        <td><span class="sch-dot"></span>MATH 101</td>
+                        <td>2:30 PM – 4:00 PM</td>
+                    </tr>
+
+                    <!-- Wednesday -->
+                    <tr class="sch-gen" tabindex="0">
+                        <td>Wednesday</td>
+                        <td><span class="sch-dot"></span>Intro to Comp</td>
+                        <td>9:00 AM – 12:00 PM</td>
+                    </tr>
+                    <tr class="sch-prog" tabindex="0">
+                        <td>Wednesday</td>
+                        <td><span class="sch-dot"></span>Computer Programming</td>
+                        <td>4:00 PM – 7:00 PM</td>
+                    </tr>
+
+                    <!-- Thursday -->
+                    <tr class="sch-prog" tabindex="0">
+                        <td>Thursday</td>
+                        <td><span class="sch-dot"></span>P64COMP</td>
+                        <td>1:00 PM – 2:30 PM</td>
+                    </tr>
+                    <tr class="sch-math" tabindex="0">
+                        <td>Thursday</td>
+                        <td><span class="sch-dot"></span>MATH 101</td>
+                        <td>2:30 PM – 4:00 PM</td>
+                    </tr>
+
+                    <!-- Friday -->
+                    <tr class="sch-gen" tabindex="0">
+                        <td>Friday</td>
+                        <td><span class="sch-dot"></span>UTS</td>
+                        <td>9:00 AM – 12:00 PM</td>
+                    </tr>
+                    <tr class="sch-math" tabindex="0">
+                        <td>Friday</td>
+                        <td><span class="sch-dot"></span>MATH 101</td>
+                        <td>1:00 PM – 3:00 PM</td>
+                    </tr>
+
+                    <!-- Saturday -->
+                    <tr class="sch-gen" tabindex="0">
+                        <td>Saturday</td>
+                        <td><span class="sch-dot"></span>NSTP LTS PM-1</td>
+                        <td>1:00 PM – 4:00 PM</td>
+                    </tr>
+                    <tr class="sch-gen" tabindex="0">
+                        <td>Saturday</td>
+                        <td><span class="sch-dot"></span>Path Fit</td>
+                        <td>4:00 PM – 7:00 PM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- CODING LANGUAGE: progress bars. --w is how full the bar is -->
+        <section class="progress-section panel">
+            <h2>Coding language</h2>
+
+            <div class="bars">
+                <div class="bar"><span>HTML</span><div class="track" role="progressbar" aria-label="HTML" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60"><div class="fill" style="--w:60%"></div></div><span class="pct">60%</span></div>
+                <div class="bar"><span>CSS</span><div class="track" role="progressbar" aria-label="CSS" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40"><div class="fill" style="--w:40%"></div></div><span class="pct">40%</span></div>
+                <div class="bar"><span>C</span><div class="track" role="progressbar" aria-label="C" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40"><div class="fill" style="--w:40%"></div></div><span class="pct">40%</span></div>
+            </div>
+
+            <div class="verse">
+                <p>Still learning and improving</p>
+            </div>
+        </section>
+
+        <!-- FAV MOVIES: four picture cards -->
+        <section class="cards-section panel">
+            <h2>Fav Movies</h2>
+            <div class="cards">
+                <figure class="card card-Spiderman">
+                    <img src="./images/Spiderman.png" alt="Spiderman" loading="lazy">
+                    <figcaption>Spiderman</figcaption>
+                </figure>
+                <figure class="card card-Bible">
+                    <img src="./images/Bible.png" alt="Bible" loading="lazy">
+                    <figcaption>Bible</figcaption>
+                </figure>
+                <figure class="card card-Marvel">
+                    <img src="./images/Marvel.png" alt="Marvel" loading="lazy">
+                    <figcaption>Marvel</figcaption>
+                </figure>
+                <figure class="card card-Avatar">
+                    <img src="./images/Avatar.jpg" alt="Avatar" loading="lazy">
+                    <figcaption>Avatar</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- HOBBIES SECTION EXPLAINED
+     <details>  = the whole box that can open and close when clicked
+     <summary>  = the title you always see and click on
+     <img>      = a small icon inside the title (game, headset, and books img)
+                  src="..."   the image file name (must be inside the images folder)
+                  alt="..."   text shown if the image doesn't load, and read by screen readers
+                  width="40"  makes the icon 40 pixels wide so it isn't huge
+     <p>        = the paragraph hidden inside the box until you click it
+-->
+        <section id="hobbies">
+            <div class="half panel">
+                <h2>HOBBIES</h2>
+
+                <details>
+                    <summary><img src="./images/game.png" alt="Games" width="40"> Hobby 1</summary>
+                    <p>Playing online games in my free time.</p>
+                </details>
+
+                <details>
+                    <summary><img src="./images/headphones.png" alt="Music" width="40"> Hobby 2</summary>
+                    <p>Enjoy playing music while coding and or playing games.</p>
+                </details>
+
+                <details>
+                    <summary><img src="./images/books.png" alt="Books" width="40"> Hobby 3</summary>
+                    <p>Enjoy learning new stuff that interest my curiosity.</p>
+                </details>
+            </div>
+
+            <div class="half panel">
+                <h2>FAVORITES</h2>
+
+                <details>
+                    <summary><img src="./images/food.png" alt="Food" width="40"> Fav 1</summary>
+                    <p>Favorite Foods</p>
+                    <ul>
+                        <li>Chop Suey</li>
+                        <li>Fried Chicken</li>
+                        <li>Chicken Broccoli</li>
+                        <li>Pesto Pasta</li>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary><img src="./images/Game.png" alt="Games" width="40"> Fav 2</summary>
+                    <p>Favorite Games</p>
+                    <ul>
+                        <li>MLBB</li>
+                        <li>CODM</li>
+                        <li>ROBLOX HORROR</li>
+                        <li>MINECRAFT</li>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary><img src="./images/headphones.png" alt="Music" width="40"> Fav 3</summary>
+                    <p>Favorite Songs</p>
+                    <a class="spotify" href="https://open.spotify.com/playlist/37i9dQZF1F5p3rmiWPIYgZ?si=82E-12ZYSnGTiXAXFwjDaA&amp;utm_source=copy-link&amp;pi=IywjfVC6Q5qiT" target="_blank" rel="noopener">
+                        <img src="./images/Spotify.png" class="logo" alt="Spotify logo"> Spotify Playlist
+                    </a>
+                </details>
+            </div>
+        </section>
+
+        <!-- GOALS and REFLECTION -->
+        <section id="Goals" class="panel">
+            <h2>GOALS</h2>
+            <ul class="goals">
+                <li>Become Web Developer</li>
+                <li>Become Fullstack Developer</li>
+                <li>Develop a game or app</li>
+            </ul>
+        </section>
+
+        <section id="Reflect" class="panel">
+            <h2>REFLECTION</h2>
+            <p class="reflection">
+                While making this web page, I learned that I can be creative and express myself through web design. I also learned that creating a website requires patience, effort,
+                and attention to detail. I discovered how important it is to organize information, choose suitable colors, and arrange elements properly to make a page look clean and attractive.
+                Compared to my previous About Me activity, I improved my skills in designing and organizing my webpage. I became more familiar with using HTML and CSS and learned how to make my
+                page look better and more presentable. I also became more confident in expressing my personality and ideas through my design. Overall, this activity helped me improve both my creativity and my web design skills.
+            </p>
+        </section>
+
+        <div class="back-row">
+            <a class="btn btn-ghost" href="../../index.html">&#8592; Back to Home</a>
+        </div>
+    </main>
+
+    <!-- FOOTER: contact info -->
+    <footer id="Contact" class="footer">
+        <h2>CONTACT</h2>
+
+        <!-- SOCIAL BUTTONS EXPLAINED
+     .social    = the row that holds the buttons
+     .icon      = one white button. It is a link (<a>), so you can click it
+     <i>        = the icon itself. It comes from Font Awesome (linked in the <head>)
+     .label     = the name of the button. It is hidden until you hover over the button
+     facebook / instagram / gmail / bu-email = the glow color of each button
+-->
+        <div class="social">
+            <a class="icon facebook" href="https://www.facebook.com/share/1JDShgjcwp/" target="_blank" rel="noopener" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                <span class="label">Facebook</span>
+            </a>
+
+            <a class="icon instagram" href="https://www.instagram.com/rai.blu.tzy?vrfl=c2lnZXh2b3BkaWg1" target="_blank" rel="noopener" aria-label="Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                <span class="label">Instagram</span>
+            </a>
+
+            <a class="icon gmail" href="mailto:johnraizelcominguez@gmail.com" aria-label="Gmail">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <span class="label">Gmail</span>
+            </a>
+
+            <a class="icon bu-email" href="mailto:johnraizell.cominguez26@bicol-u.edu.ph" aria-label="BU Email">
+                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                <span class="label">BU Email</span>
+            </a>
+        </div>
+
+        <!-- the same contact information, written out -->
+        <ul class="contact-details">
+            <li><span class="detail-name">GMAIL:</span> johnraizelcominguez@gmail.com</li>
+            <li><span class="detail-name">BU EMAIL:</span> johnraizell.cominguez26@bicol-u.edu.ph</li>
+            <li><span class="detail-name">INSTAGRAM:</span> Blu.rai.tzy</li>
+            <li><span class="detail-name">FACEBOOK:</span> John Raizel Cominguez</li>
+        </ul>
+
+        <p class="made-by">MADE BY: JOHN RAIZEL COMINGUEZ, CS 101, Bicol University</p>
+    </footer>
+
+    <!-- Button that takes you back to the top -->
+    <a class="to-top" href="#home" aria-label="Back to top">&#8593;</a>
+
+</body>
+</html>
